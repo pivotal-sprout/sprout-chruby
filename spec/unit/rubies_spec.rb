@@ -8,9 +8,8 @@ describe 'sprout-chruby::rubies' do
   it 'installs a default list of rubies' do
     runner.converge(described_recipe)
 
-    expect(runner).to run_execute("#{ruby_install_cmd} ruby 1.9.3-p547")
-    expect(runner).to run_execute("#{ruby_install_cmd} ruby 2.0.0-p451")
-    expect(runner).to run_execute("#{ruby_install_cmd} ruby 2.1.2")
+    expect(runner).to run_execute("#{ruby_install_cmd} ruby 2.0.0-p647")
+    expect(runner).to run_execute("#{ruby_install_cmd} ruby 2.1.7")
   end
 
   it 'installs a specified list of rubies' do
