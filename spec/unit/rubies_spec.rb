@@ -10,6 +10,7 @@ describe 'sprout-chruby::rubies' do
 
     expect(runner).to run_execute("#{ruby_install_cmd} ruby 2.0.0-p647")
     expect(runner).to run_execute("#{ruby_install_cmd} ruby 2.1.7")
+    expect(runner).to run_execute("#{ruby_install_cmd} ruby 2.2.3")
   end
 
   it 'installs a specified list of rubies' do
