@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe 'sprout-chruby' do
   before :all do
-    expect(system('brew list chruby')).to eq(false)
+    expect(system('which brew')).to eq(false)
     expect(system('soloist')).to eq(true)
   end
 
