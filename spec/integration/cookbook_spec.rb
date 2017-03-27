@@ -3,6 +3,7 @@ require 'spec_helper'
 RSpec.describe 'sprout-chruby' do
   before :all do
     expect(system('which brew')).to eq(false)
+    expect(system('soloist')).to eq(true)
   end
 
   it 'installs chruby' do
