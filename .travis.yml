@@ -1,7 +1,14 @@
 language: objective-c
+osx_image: xcode8.2
 rvm: system
 install:
-  - sudo gem install bundler --no-ri --no-rdoc
-  - sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle install
+  # we expect sprout to provide homebrew so we should ensure it isn't present
+  - brew cask list && brew cask zap $(brew cask list)
+  - brew list && brew uninstall --force --ignore-dependencies $(brew list)
+  - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" -- --force
+  - rm -rf /usr/local/var/postgres # clear out Travis-installed Postgres 9.4 data
+
+  - for ruby in $(rvm list strings); do rvm uninstall "${ruby}"; done
+  - travis_wait rvm implode --force # We are testing installation of Rubies, so should uninstall everything
 script:
   - bundle exec rake ci
