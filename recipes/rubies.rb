@@ -1,3 +1,5 @@
+include_recipe 'homebrew'
+
 package 'ruby-install'
 
 ruby_install_dir = node['sprout']['chruby']['rubies_dir']

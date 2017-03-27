@@ -1,3 +1,5 @@
+include_recipe 'homebrew'
+
 package 'chruby'
 
 include_recipe 'sprout-base::bash_it'
