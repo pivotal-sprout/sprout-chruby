@@ -1,7 +1,7 @@
 require 'unit/spec_helper'
 
 # rubocop:disable Metrics/BlockLength
-describe 'sprout-chruby::default_ruby' do
+RSpec.describe 'sprout-chruby::default_ruby' do
   let(:runner) { ChefSpec::SoloRunner.new }
 
   let(:ruby_version_file) { File.join(runner.node['sprout']['home'], '.ruby-version') }

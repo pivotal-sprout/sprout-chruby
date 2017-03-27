@@ -1,6 +1,6 @@
 require 'unit/spec_helper'
 
-describe 'sprout-chruby::rubies' do
+RSpec.describe 'sprout-chruby::rubies' do
   let(:runner) { ChefSpec::SoloRunner.new }
 
   let(:ruby_install_cmd) { "ruby-install --cleanup --rubies-dir #{runner.node['sprout']['chruby']['rubies_dir']}" }
