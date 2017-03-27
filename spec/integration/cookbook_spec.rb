@@ -7,7 +7,7 @@ RSpec.describe 'sprout-chruby' do
   end
 
   it 'installs chruby' do
-    expect(system('brew list chruby')).to eq(true)
+    expect(File.exist?('/usr/local/bin/chruby-exec')).to eq(true)
   end
 
   it 'installs a few rubies' do
