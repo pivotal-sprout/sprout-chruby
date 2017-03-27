@@ -11,4 +11,4 @@ install:
   - for ruby in $(rvm list strings); do rvm uninstall "${ruby}"; done
   - travis_wait rvm implode --force # We are testing installation of Rubies, so should uninstall everything
 script:
-  - bundle exec rake ci
+  - ./sprout exec rake --trace ci
