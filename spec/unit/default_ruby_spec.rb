@@ -1,5 +1,6 @@
 require 'unit/spec_helper'
 
+# rubocop:disable Metrics/BlockLength
 describe 'sprout-chruby::default_ruby' do
   let(:runner) { ChefSpec::SoloRunner.new }
 
@@ -55,3 +56,4 @@ describe 'sprout-chruby::default_ruby' do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
