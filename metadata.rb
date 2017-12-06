@@ -1,3 +1,4 @@
+chef_version     '>= 12.6.0'
 name             'sprout-chruby'
 maintainer       'Pivotal'
 maintainer_email 'sprout-maintainers@googlegroups.com'

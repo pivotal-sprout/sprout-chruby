@@ -6,7 +6,7 @@ RSpec.describe 'sprout-chruby::chruby' do
   let(:auto_change_ruby) { nil }
 
   before do
-    runner.node.set['sprout']['chruby']['auto_change_ruby'] = auto_change_ruby
+    runner.node.override['sprout']['chruby']['auto_change_ruby'] = auto_change_ruby
 
     runner.converge(described_recipe)
   end
