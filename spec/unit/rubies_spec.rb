@@ -13,8 +13,8 @@ RSpec.describe 'sprout-chruby::rubies' do
 
   it 'installs a specified list of rubies' do
     runner.node.set['sprout']['chruby']['rubies'] = {
-      'ruby' => %w(1.9.3),
-      'jruby' => %w(1.9.3)
+      'ruby' => %w[1.9.3],
+      'jruby' => %w[1.9.3]
     }
 
     runner.converge(described_recipe)
@@ -24,7 +24,7 @@ RSpec.describe 'sprout-chruby::rubies' do
   end
 
   it 'does not install rubies that have already been installed' do
-    runner.node.set['sprout']['chruby']['rubies'] = { 'ruby' => %w(2.1.2) }
+    runner.node.set['sprout']['chruby']['rubies'] = { 'ruby' => %w[2.1.2] }
 
     allow(Dir).to receive(:exist?).and_return(true)
 
