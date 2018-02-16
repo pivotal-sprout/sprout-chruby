@@ -11,8 +11,8 @@ RSpec.describe 'sprout-chruby::default_ruby' do
     let(:default_ruby) { 'FAKE_RUBY-3.2.1' }
 
     before do
-      runner.node.set['sprout']['chruby']['default_ruby'] = default_ruby
-      runner.node.set['sprout']['chruby']['auto_change_ruby'] = auto_change_ruby
+      runner.node.override['sprout']['chruby']['default_ruby'] = default_ruby
+      runner.node.override['sprout']['chruby']['auto_change_ruby'] = auto_change_ruby
       runner.converge(described_recipe)
     end
 
@@ -43,7 +43,7 @@ RSpec.describe 'sprout-chruby::default_ruby' do
 
   context 'when sprout.chruby.default_ruby is specified' do
     before do
-      runner.node.set['sprout']['chruby']['default_ruby'] = false # nil will not override default attribute
+      runner.node.override['sprout']['chruby']['default_ruby'] = false # nil will not override default attribute
       runner.converge(described_recipe)
     end
 

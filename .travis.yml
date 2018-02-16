@@ -1,5 +1,6 @@
 language: objective-c
-osx_image: xcode8.2
+os: osx
+osx_image: xcode9.3beta
 rvm: system
 install:
   # we expect sprout to provide homebrew so we should ensure it isn't present
