@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 include_recipe 'homebrew'
 
 package 'ruby-install'

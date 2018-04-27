@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 node.default['sprout']['chruby']['auto_change_ruby'] = true
 node.default['sprout']['chruby']['default_ruby'] = 'ruby-2.4.1'
 

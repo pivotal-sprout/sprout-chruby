@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 if node['sprout']['chruby']['default_ruby']
   if node['sprout']['chruby']['auto_change_ruby']
     file File.join(node['sprout']['home'], '.ruby-version') do

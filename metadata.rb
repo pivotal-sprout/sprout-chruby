@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 chef_version     '>= 12.6.0'
 name             'sprout-chruby'
 maintainer       'Pivotal'
